@@ -1,2 +1,3 @@
-# ot-harjoitustyo
-harjoitustyö 
+Ohjelmistotekniikka, harjoitustyö
+
+harjoitustyön aihe on budjettisovellus
