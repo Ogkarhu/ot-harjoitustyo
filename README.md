@@ -1,7 +1,7 @@
 **Ohjelmistotekniikka, harjoitustyö**
 
 harjoitustyön aihe on budjettisovellus
-aihe saattaa vielä muuttua
+
 
 Laskarit https://github.com/Ogkarhu/laskarit
 
