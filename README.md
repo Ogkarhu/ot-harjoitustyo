@@ -3,4 +3,6 @@
 harjoitustyön aihe on budjettisovellus
 aihe saattaa vielä muuttua
 
-https://github.com/Ogkarhu/laskarit
+Laskarit https://github.com/Ogkarhu/laskarit
+
+Määrittelydokumentti https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/vaatimusmaarittely.md
