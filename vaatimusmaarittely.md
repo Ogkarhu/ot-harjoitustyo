@@ -20,7 +20,9 @@ Käyttäjä näkee koosteen budjettitasapainostaan ja pystyy siirtymään kuukau
 
 ### Tulon tai menon lisääminen
 
-Käyttäjä voi lisätä kertaluontoisen, x-kertaa tai toistaiseksi toistuvan tulon tai menon.
+Käyttäjä voi lisätä kertaluontoisen (tehty), 
+x-kertaa 
+tai toistaiseksi toistuvan tulon tai menon. 
 
 ### Kuukausinäkymä
 

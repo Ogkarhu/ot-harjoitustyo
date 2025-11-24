@@ -1,46 +1,79 @@
 import tkinter as tk
-import sqlite3
-
-con = sqlite3.connect(":memory:")#vaihda oikeaan kun tallennetaan esim. connect(budget)
-cur = con.cursor()
-cur.execute("CREATE TABLE budget(income,expense)")
-cur.execute("""
-    INSERT INTO budget (income, expense)
-    VALUES
-        (3000, 800),
-        (4500, 1500),
-        (5200, 2000)
-""")
+from budget import Budget
 
 
 class App(tk.Frame):
     def __init__(self, master):
         super().__init__(master)
+        
+        self.budget = Budget()
         self.pack()
 
-        self.entrythingy = tk.Entry()
-        self.entrythingy.pack()
+        self.expense_label = tk.Label(master,text="Add expense")
+        self.expense_label.pack()
+        
+        self.expense_entry = tk.Entry()
+        self.expense_entry.pack()
 
-        # Create the application variable.
-        self.contents = tk.StringVar()
+        self.textthingy_income = tk.Label(master,text="Add income")
+        self.textthingy_income.pack()
+        
+        self.income_entry = tk.Entry()
+        self.income_entry.pack()
+
+
+        
+        # Create the application variabl"e.
+        self.content_expense = tk.StringVar()
+        self.content_income = tk.StringVar()
+
         # Set it to some value.
-        self.contents.set("this is a variable")
+        #self.contents.set("")
         # Tell the entry widget to watch this variable.
-        self.entrythingy["textvariable"] = self.contents
-        print(self.get_budget())
+        self.expense_entry["textvariable"] = self.content_expense
+        print(self.budget.get_budget())
+
+        self.income_entry["textvariable"] = self.content_income
+
         # Define a callback for when the user hits return.
         # It prints the current value of the variable.
 
-        self.entrythingy.bind('<Key-Return>',
-                             self.print_contents)
+        self.expense_entry.bind('<Key-Return>',
+                             self.add_expense)
+
+        self.income_entry.bind('<Key-Return>',
+                            self.add_income)
 
     def print_contents(self, event):
         print("Hi. The current entry content is:",
-              self.contents.get())
+              self.content_expense.get())
 
-    def get_budget(self):
-        cur.execute("SELECT * FROM budget")
-        return cur.fetchall()
+    def add_expense(self, event):
+        value =self.content_expense.get()
+
+        #osittain tekoälygeneroitu osa alkaa
+        try:
+            amount = int(value)
+        except ValueError:
+            print("Insert a valid sum")
+            return
+        self.budget.add_expense(amount)
+        print("Added expense:",amount)
+        #osittain tekoälygeneroitu osa loppuu
+        self.content_expense.set("")
+
+
+    def add_income(self, event):
+        value =self.content_income.get()
+
+        try:
+            amount = int(value)
+        except ValueError:
+            print("Insert a valid sum")
+            return
+        self.budget.add_income(amount)
+        print("Added income:",amount)
+        self.content_income.set("")
 
 
 root = tk.Tk()
