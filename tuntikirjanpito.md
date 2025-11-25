@@ -7,3 +7,4 @@
 |19.11  |1h    |autopep8-formatointi ja aiheeseen tutustuminen |
 |20.11  |2h    |sovelluksen käynnistämisen toteutus|
 |24.11  |4h    |tulojen ja menojen lisääminen käyttöliittymään|
+|25.11  |3h    |korjauksia ja dokumentaatiota |
