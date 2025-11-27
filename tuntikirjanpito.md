@@ -8,3 +8,4 @@
 |20.11  |2h    |sovelluksen käynnistämisen toteutus|
 |24.11  |4h    |tulojen ja menojen lisääminen käyttöliittymään|
 |25.11  |3h    |korjauksia ja dokumentaatiota |
+|27.11  |5h    |budjetin näyttämisen toteutus |

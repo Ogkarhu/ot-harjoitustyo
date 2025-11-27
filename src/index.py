@@ -21,6 +21,11 @@ class App(tk.Frame):
         self.income_entry = tk.Entry()
         self.income_entry.pack()
 
+        self.budget_display = tk.Text(self, width=70,height=30)
+        self.budget_display.pack()
+
+        self.budget_display.insert(tk.END,"")
+
 
         
         # Create the application variabl"e.
@@ -43,6 +48,10 @@ class App(tk.Frame):
 
         self.income_entry.bind('<Key-Return>',
                             self.add_income)
+
+    def fetch_budget(self):
+        budget_output = self.budget.get_budget()
+
 
     def print_contents(self, event):
         print("Hi. The current entry content is:",

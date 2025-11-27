@@ -36,3 +36,17 @@ class Budget:
             (amount, None)
         )
         self.db.commit()
+
+    def expense_sum(self):
+        self.cur.execute(
+            "SELECT SUM(expense) FROM budget"
+        )
+        return self.cur.fetchone()
+        
+
+    def income_sum(self):
+        self.cur.execute(
+            "SELECT SUM(income) FROM budget"
+        )
+        return self.cur.fetchone()
+        
