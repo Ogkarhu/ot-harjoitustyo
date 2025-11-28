@@ -24,9 +24,13 @@ class App(tk.Frame):
         self.budget_display = tk.Text(self, width=70,height=30)
         self.budget_display.pack()
 
-        self.budget_display.insert(tk.END,"")
+        self.budget_display.insert(tk.END,str(self.fetch_budget()))
+        #income button
+        self.income_button = tk.Button(self, text="Show income",command=self.fetch_income)
+        self.income_button.pack()
 
-
+        self.expense_button = tk.Button(self, text="Show expenses",command=self.fetch_expense)
+        self.expense_button.pack()
         
         # Create the application variabl"e.
         self.content_expense = tk.StringVar()
@@ -49,8 +53,21 @@ class App(tk.Frame):
         self.income_entry.bind('<Key-Return>',
                             self.add_income)
 
+    def fetch_income(self):
+        income_output = self.budget.get_income()
+        self.budget_display.delete("1.0", tk.END)
+        self.budget_display.insert(tk.END,str(income_output))
+
+    def fetch_expense(self):
+        expense_output = self.budget.get_expense()
+        self.budget_display.delete("1.0", tk.END)
+        self.budget_display.insert(tk.END,str(expense_output))
+
+
+
     def fetch_budget(self):
         budget_output = self.budget.get_budget()
+        return budget_output
 
 
     def print_contents(self, event):

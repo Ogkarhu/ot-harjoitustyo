@@ -8,20 +8,19 @@ class Budget:
         print(self.db)
         self.cur = self.db.cursor()
         self.cur.execute("CREATE TABLE IF NOT EXISTS budget(income INTEGER,expense INTEGER)")
-        # self.cur.execute("""
-        #     INSERT INTO budget (income, expense)
-        #     VALUES
-        #         (3000, 800),
-        #         (4500, 1500),
-        #         (5200, 2000)
-        # """)
         self.db.commit()
 
     def get_budget(self):
         self.cur.execute("SELECT * FROM budget")
         return self.cur.fetchall()
 
-    #def get
+    def get_income(self):
+        self.cur.execute("SELECT income FROM budget")
+        return self.cur.fetchall()
+
+    def get_expense(self):
+        self.cur.execute("SELECT expense FROM budget")
+        return self.cur.fetchall()
 
     def add_expense(self, amount):
         self.cur.execute(
