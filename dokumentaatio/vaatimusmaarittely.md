@@ -28,6 +28,8 @@ tai toistaiseksi toistuvan tulon tai menon.
 
 Käyttäjä näkee koosteen omasta kuukaudestaan
 
+
+
 ## Jatkokehitys
 
 Lisätoiminnallisuuksia voidaan lisätä aikataulun salliessa

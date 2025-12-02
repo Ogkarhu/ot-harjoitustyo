@@ -10,3 +10,4 @@
 |25.11  |3h    |korjauksia ja dokumentaatiota |
 |27.11  |5h    |budjetin näyttämisen toteutus |
 |28.11  |3h    |kulu- ja menonappien lisäys   |
+|2.12   |3h    |changelog, dokumentaation korjaaminen|
