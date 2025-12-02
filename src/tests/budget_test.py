@@ -7,4 +7,8 @@ class TestBudget(unittest.TestCase):
         self.budget = Budget()
 
     def test_database_created_correctly(self):
-        self.assertEqual(self.budget.get_budget(), [])
+        self.assertEqual(self.budget.get_budget(), [(None,1000)])
+
+    def test_add_expense(self):
+        self.budget.add_expense(1000)
+        self.assertEqual(self.budget.expense_sum(),[(1000,)])
