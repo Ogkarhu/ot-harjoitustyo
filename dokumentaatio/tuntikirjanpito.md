@@ -11,3 +11,5 @@
 |27.11  |5h    |budjetin näyttämisen toteutus |
 |28.11  |3h    |kulu- ja menonappien lisäys   |
 |2.12   |3h    |changelog, dokumentaation korjaaminen|
+|8.12   |1h    |sekvenssikaavion luominen |
+|9.12   |3h    |kommentointi ja uuden ominaisuuden toteutuksen miettiminen|
