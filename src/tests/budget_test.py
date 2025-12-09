@@ -15,4 +15,4 @@ class TestBudget(unittest.TestCase):
         """Testaa onnistuuko kulun luominen
         """
         self.budget.add_expense(1000)
-        self.assertEqual(self.budget.expense_sum(),[(1000,)])
+        self.assertEqual(self.budget.expense_sum(),(1000,))

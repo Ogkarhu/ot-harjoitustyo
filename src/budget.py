@@ -22,14 +22,14 @@ class Budget:
     def get_income(self):
         """Hakee ja palauttaa kaikki tulot budjetista
         """
-        self.cur.execute("SELECT income FROM budget")
-        return self.cur.fetchall()
+        self.cur.execute("SELECT income FROM budget WHERE income IS NOT NULL")
+        return [row[0] for row in self.cur.fetchall()]
 
     def get_expense(self):
         """Hakee ja palauttaa kaikki kustannukset budjetista
         """
-        self.cur.execute("SELECT expense FROM budget")
-        return self.cur.fetchall()
+        self.cur.execute("SELECT expense FROM budget WHERE expense IS NOT NULL")
+        return [row[0] for row in self.cur.fetchall()]
 
     def add_expense(self, amount):
         """Lisää yksittäisen kulun budjettiin

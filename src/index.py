@@ -73,7 +73,8 @@ class App(tk.Frame):
     
         income_output = self.budget.get_income()
         self.budget_display.delete("1.0", tk.END)
-        self.budget_display.insert(tk.END,str(income_output))
+        for income in income_output:
+            self.budget_display.insert(tk.END, f"{income}\n")
         income_sum = self.budget.income_sum()
         self.income_display.delete("1.0", tk.END)
         self.income_display.insert(tk.END,str(income_sum))
@@ -84,7 +85,8 @@ class App(tk.Frame):
         """
         expense_output = self.budget.get_expense()
         self.budget_display.delete("1.0", tk.END)
-        self.budget_display.insert(tk.END,str(expense_output))
+        for expense in expense_output:
+            self.budget_display.insert(tk.END,f"{expense}\n")
         expense_sum = self.budget.expense_sum()
         self.expense_display.delete("1.0", tk.END)
         self.expense_display.insert(tk.END,str(expense_sum))
