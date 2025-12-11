@@ -10,3 +10,8 @@
 -sekvenssikaavio luotu
 -tulot ja menot tulostuvat nyt allekkain listana
 -tehdään release
+
+## Viikko7
+-Muutettu kulujen ja menojen lisääminen dialogipohjaiseksi
+-Lisätty kuukausinäkymä
+-Tulon tai menon poistaminen lisätty

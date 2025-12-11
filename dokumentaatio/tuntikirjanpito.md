@@ -13,3 +13,5 @@
 |2.12   |3h    |changelog, dokumentaation korjaaminen|
 |8.12   |1h    |sekvenssikaavion luominen |
 |9.12   |3h    |kommentointi ja tulosteiden korjaus|
+|10.12  |2h    |toteutuksen muuttaminen dialogipohjaiseksi|
+|11.12  |4h    |kuukausinäkymä ja korjausta|

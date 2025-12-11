@@ -22,11 +22,11 @@ Käyttäjä näkee koosteen budjettitasapainostaan ja pystyy siirtymään kuukau
 
 Käyttäjä voi lisätä kertaluontoisen (tehty), 
 x-kertaa 
-tai toistaiseksi toistuvan tulon tai menon. 
+tai toistaiseksi toistuvan tulon tai menon. (tehty)
 
 ### Kuukausinäkymä
 
-Käyttäjä näkee koosteen omasta kuukaudestaan
+Käyttäjä näkee koosteen omasta kuukaudestaan (tehty)
 
 
 
