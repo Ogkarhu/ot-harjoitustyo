@@ -10,18 +10,17 @@ Sovelluksella tulee olemaan ainoastaan yksi käyttäjä joka pystyy käyttämä�
 
 ## Käyttöliittymäluonnos
 
-Sovelluksessa on koostenäkymä ja useampi muokkausnäkymä
+Sovelluksessa on koostenäkymä ja useampi muokkausikkuna
 
 ![](./etusivu.png)
 
 ### Aloitusnäkymä
 
-Käyttäjä näkee koosteen budjettitasapainostaan ja pystyy siirtymään kuukausinäkymään tai lisäämään tuloja tai menoja
+Käyttäjä näkee koosteen budjettitasapainostaan ja pystyy siirtymään kuukausinäkymään tai lisäämään tuloja tai menoja (tehty)
 
 ### Tulon tai menon lisääminen
 
 Käyttäjä voi lisätä kertaluontoisen (tehty), 
-x-kertaa 
 tai toistaiseksi toistuvan tulon tai menon. (tehty)
 
 ### Kuukausinäkymä

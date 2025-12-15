@@ -15,3 +15,10 @@
 -Muutettu kulujen ja menojen lisääminen dialogipohjaiseksi
 -Lisätty kuukausinäkymä
 -Tulon tai menon poistaminen lisätty
+
+## Viikko8
+-Testit lisätty ja kattavuus saavutettu
+-Kommentit ajantasaistettu
+-Docstringit ajantasaistettu
+-Etusivu muotoiltu
+-Koodin muotoilu tehty

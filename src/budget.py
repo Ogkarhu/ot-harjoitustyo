@@ -67,7 +67,7 @@ class Budget:
             "SELECT SUM(expense) FROM budget"
         )
         return self.cur.fetchone()
-        
+
 
     def income_sum(self):
         """Hakee ja palauttaa tulojen tulon
@@ -79,23 +79,34 @@ class Budget:
 
     #tekoälygeneroitu osa alkaa
     def get_monthly_budget(self):
+        """Hakee kuukausittaisen budjetin toistuvine tuloineen ja menoineen
+        """
         monthly = defaultdict(lambda: {"income": 0, "expense": 0})
 
-        # Hae kaikki rivit, joissa on joko tulo tai meno
-        self.cur.execute("SELECT income, expense, date FROM budget")
+        #rivit joissa on joko tulo tai meno
+        self.cur.execute("SELECT income, expense, date, recurring FROM budget")
         rows = self.cur.fetchall()
 
-        for income, expense, date in rows:
-            if date is None:
+        for income, expense, date_string, recurring in rows:
+            if not date_string:
                 continue
 
-            # Muoto: "YYYY-MM-DD" -> "YYYY-MM"
-            month = date[:7]
 
-            if income is not None:
-                monthly[month]["income"] += income
-            if expense is not None:
-                monthly[month]["expense"] += expense
+            start_date = datetime.strptime(date_string, "%Y-%m-%d")
+            repeat_count = 12 if recurring else 1
+
+            for i in range(repeat_count):
+                current_date = start_date.replace(
+                    year=start_date.year + (start_date.month + i - 1) // 12,
+                    month=(start_date.month + i - 1) % 12 + 1
+                )
+
+                month_key = current_date.strftime("%Y-%m")
+
+                if income is not None:
+                    monthly[month_key]["income"] += income
+                if expense is not None:
+                    monthly[month_key]["expense"] += expense
 
         # laske kuukausibudjetti
         for month in monthly:
@@ -106,8 +117,8 @@ class Budget:
         return monthly
     #tekoälygeneroitu osa loppuu
 
-    def delete_entry(self, id):
-        self.cur.execute("DELETE FROM budget WHERE id = ?", (id,))
+    def delete_entry(self, id_num):
+        """Poistaa syötteen tietokannasta
+        """
+        self.cur.execute("DELETE FROM budget WHERE id = ?", (id_num,))
         self.db.commit()
-
-        

@@ -15,3 +15,4 @@
 |9.12   |3h    |kommentointi ja tulosteiden korjaus|
 |10.12  |2h    |toteutuksen muuttaminen dialogipohjaiseksi|
 |11.12  |4h    |kuukausinäkymä ja korjausta|
+|15.12  |5h    |sovellusnäkymän muotoilua ja korjauksia|
