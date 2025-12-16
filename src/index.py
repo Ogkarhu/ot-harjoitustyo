@@ -182,8 +182,10 @@ class App(tk.Frame):
                 tk.END,
                 f"ID:{id} | Name:{name} | Date:{date} | Income:{income} | Expense:{expense} | Recurring:{recurring}\n"
             )
-    
+
     def wrong_input(self,message):
+        """Virheilmoituksen apufunktio
+        """
         messagebox.showerror("Wrong input", message)
 
 
@@ -256,7 +258,7 @@ class IncomeDialog(simpledialog.Dialog):
             "recurring":self.rec_var.get()
         }
 
- 
+
 
 root = tk.Tk()
 myapp = App(root)

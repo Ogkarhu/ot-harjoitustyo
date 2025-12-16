@@ -4,7 +4,7 @@ Sovellus käynnistyy suorittamalla
 poetry run invoke start
 ```
 
-##Aloitusnäkymä
+## Aloitusnäkymä
 
 ![Aloitusnäkymä](https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/dokumentaatio/kuvat/sov_etusivu.png)
 
@@ -19,7 +19,7 @@ Painamalla "Add expense" tai "Add income" aukeaa uusi valikko
 "Date" -kohtaan lisätään päivämäärä
 "Recurring?" -kohtaan laitetaan ruksi jos tapahtuma toistuu kuukausittain
 
-##Syötenäkymä
+## Syötenäkymä
 
 Yksittäiset syötteet näkyvät painamalla "Show all entries"
 
