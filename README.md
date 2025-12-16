@@ -6,13 +6,15 @@ harjoitustyön aihe on budjettisovellus
 
 ## Dokumentaatio
 
--Määrittelydokumentti https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md
+- Määrittelydokumentti https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/dokumentaatio/vaatimusmaarittely.md
 
--Työaikakirjanpito https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md
+- Työaikakirjanpito https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/dokumentaatio/tuntikirjanpito.md
 
--Release https://github.com/Ogkarhu/ot-harjoitustyo/releases/tag/viikko5
+- Release https://github.com/Ogkarhu/ot-harjoitustyo/releases/tag/viikko5
 
--Käyttöohje https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md
+- Käyttöohje https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md
+
+- Testidokumentaatio https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/dokumentaatio/testaus.md
 
 ## Asennus
 
