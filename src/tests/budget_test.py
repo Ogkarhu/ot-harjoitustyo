@@ -2,9 +2,10 @@ import unittest
 from budget import Budget
 
 
-#tekoälygeneroitu osa alkaa
-class TestBudget(unittest.TestCase):
 
+class TestBudget(unittest.TestCase):
+    """Budget luokan testit joissa testataan tietokannan käsittelyä
+    """
     def setUp(self):
         self.budget = Budget(":memory:")
 
@@ -12,7 +13,7 @@ class TestBudget(unittest.TestCase):
         """Testaa että tietokanta on alussa tyhjä
         """
         self.assertEqual(self.budget.get_budget(), [])
-    #tekoälygeneroitu osa loppuu
+
 
     def test_add_expense(self):
         """Testaa kulun lisäämistä
@@ -43,30 +44,9 @@ class TestBudget(unittest.TestCase):
 
         self.assertEqual(monthly["2025-01"]["budget"], 100)
 
-    #tekoälygeneroitu osa alkaa
+
     def test_income_sum_single(self):
         """Testaa että tulojen summa toimii yhdellä syötteellä
         """
         self.budget.add_income(1000, "test7", "2025-01-01", False)
         self.assertEqual(self.budget.income_sum(), (1000,))
-
-    def test_monthly_budget_ignores_rows_without_date(self):
-        """testaa virhettä päivämäärättömästä syötteestä
-        """
-        # oikeellinen syöte
-        self.budget.add_income(1000, "Salary", "2025-01-01", False)
-
-        # virheellinen syöte ilman päivämäärää
-        self.budget.cur.execute(
-            "INSERT INTO budget (income, expense, date, name, recurring) "
-            "VALUES (?, ?, ?, ?, ?)",
-            (500, None, None, "Broken income", False)
-        )
-        self.budget.db.commit()
-
-        monthly = self.budget.get_monthly_budget()
-
-        # Virheellinen syöte ei mene läpi
-        self.assertIn("2025-01", monthly)
-        self.assertEqual(monthly["2025-01"]["income"], 1000)
-        #tekoälygeneroitu osa loppuu

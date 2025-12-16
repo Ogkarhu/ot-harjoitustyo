@@ -1,6 +1,9 @@
+"""Ohjelman käyttäjänäkymän toteutus ja muotoilu
+"""
+
 import tkinter as tk
 import datetime
-from tkinter import simpledialog
+from tkinter import simpledialog,messagebox
 from budget import Budget
 
 
@@ -81,7 +84,7 @@ class App(tk.Frame):
             try:
                 amount = int(dialog.result["amount"])
             except ValueError:
-                print("Amount must be a number!")
+                self.wrong_input("Amount must be a number.")
                 return
 
         name = dialog.result["name"]
@@ -104,7 +107,7 @@ class App(tk.Frame):
             try:
                 amount = int(dialog.result["amount"])
             except ValueError:
-                print("Amount must be a number!")
+                self.wrong_input("Amount must be a number.")
                 return
         name = dialog.result["name"]
         date = dialog.result["date"]
@@ -179,6 +182,10 @@ class App(tk.Frame):
                 tk.END,
                 f"ID:{id} | Name:{name} | Date:{date} | Income:{income} | Expense:{expense} | Recurring:{recurring}\n"
             )
+    
+    def wrong_input(self,message):
+        messagebox.showerror("Wrong input", message)
+
 
 
 
@@ -248,6 +255,8 @@ class IncomeDialog(simpledialog.Dialog):
             "date":self.date_var.get(),
             "recurring":self.rec_var.get()
         }
+
+ 
 
 root = tk.Tk()
 myapp = App(root)

@@ -12,6 +12,8 @@ harjoitustyön aihe on budjettisovellus
 
 -Release https://github.com/Ogkarhu/ot-harjoitustyo/releases/tag/viikko5
 
+-Käyttöohje https://github.com/Ogkarhu/ot-harjoitustyo/blob/main/dokumentaatio/kayttoohje.md
+
 ## Asennus
 
 1. Riippuvuuksien asennus:
